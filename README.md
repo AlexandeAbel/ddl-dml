@@ -11,7 +11,9 @@
 
 1.4. Дайте все права для пользователя sys_temp.
 
-1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (В скриншоте выше.)
+1.5. Выполните запрос на получение списка прав для пользователя sys_temp. 
+
+![3](https://github.com/AlexandeAbel/ddl-dml/blob/main/img/3.jpg)
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
@@ -55,32 +57,25 @@ mysql -u sys_temp -p sakila < sakila-data.sql
 
 1.8
 USE sakila;
-SHOW TABLES;
+SHOW FULL TABLES FROM sakila WHERE Table_type = 'BASE TABLE';
 
 Задание 2.
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
 
 Название таблицы | Название первичного ключа
-customer         | customer_id
-
-Acter - actor_id;
-Acter_info - actor_id;
-Address - address_id;
-Category - category_id;
-City - city_id,country_id;
-Country - country_id;
-Customer - customer_id, store_id;
-Customer_list - ID;
-Film - film_id,language_id,original_language_id;
-Film_actor - actor_id, film_id;
-Film_category - film_id, category_id;
-Film-list - FID;
-Film-text - film_id;
-Inventory - inventory_id, film_id, store_id;
-Language - language_id;
-nicer_but_slower_film_list - FID;
-payment - payment_id, customer_id, staff_id, rental_id;
-Rental - retnal_id, inventory_id, customer_id, staff_id;
-Staff - staff_id;
-Staff_list - ID
-Store - store_id,manager_staff_id, address_id
+actor - actor_id.
+address - address_id.
+category - category_id.
+city - city_id.
+country - country_id.
+customer - customer_id.
+film - film.id.
+film_actor - actor_id, film_id.   
+film_category - film_id category_id.
+film_text - film_id.
+inventory - inventory_id.
+language - language_id.
+payment - payment_id.
+rental - rental_id.
+store - store_id.
+staff - staff_id.
