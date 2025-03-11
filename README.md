@@ -50,7 +50,9 @@ wget https://downloads.mysql.com/docs/sakila-db.zip
 1.7 
 unzip ...
 CREATE DATABASE sakila;
+
 mysql -u sys_temp -p sakila < sakila-schema.sql
+
 mysql -u sys_temp -p sakila < sakila-data.sql
 
 1.8
@@ -64,23 +66,41 @@ SHOW TABLES;
 customer         | customer_id
 
 Acter - actor_id;
+
 Acter_info - actor_id;
+
 Address - address_id;
+
 Category - category_id;
+
 City - city_id,country_id;
+
 Country - country_id;
+
 Customer - customer_id, store_id;
+
 Customer_list - ID;
+
 Film - film_id,language_id,original_language_id;
+
 Film_actor - actor_id, film_id;
+
 Film_category - film_id, category_id;
+
 Film-list - FID;
+
 Film-text - film_id;
+
 Inventory - inventory_id, film_id, store_id;
+
 Language - language_id;
+
 nicer_but_slower_film_list - FID;
+
 payment - payment_id, customer_id, staff_id, rental_id;
+
 Rental - retnal_id, inventory_id, customer_id, staff_id;
+
 Staff - staff_id;
 Staff_list - ID
 Store - store_id,manager_staff_id, address_id
